@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respostas</title>
+    <link rel="stylesheet" href="respostas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Oleo+Script+Swash+Caps&family=Pompiere&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <div class="container">
+            <div class="box" >   
+                <div id="barra">
+                    <a href="http://localhost:3000/"><img src="images/voltar.png" alt="erro" class="link"></a>
+                    <b class="titulo">Forum</b>
+                    <% if (role == 'aluno') { %>
+                        <img src="images/aluno50px.png" alt="erro" width="40px" height="40px" class="perfil">
+                    <% } else { %>
+                        <img src="images/professor50px.png" alt="erro" width="40px" height="40px" class="perfil">
+                    <% } %> 
+                </div>
+                
+                <div id="respostas">
+                    <form action="Perguntas" method="post">
+                        <button type="submit">fazer perguntas</button>
+                    </form>                  
+                </div>
+    
+                <div class="coluna">
+    
+                    <div class="box2">
+                        <div class="box3">
+                            <div class="user">
+                                <img src="images/0-40px.png" alt="erro">
+                                <span><%= user[0] %></span>
+                            </div>
+                            <span class="pergunta"><%= pergunta[0] %></span>
+                            <div class="responder">
+                                <button type="button" id="button0"><img src="images/abrir.svg" alt="erro" id="i0"></button>
+                            </div>
+                        </div>
+
+                        <div id="respostas0" style="display: none;">
+                            <div class="listR">
+                            
+                            </div>
+                            <form class="f">
+                                <span class="u">
+                                    <% if (role == 'aluno') { %>
+                                        <img src="images/aluno50px.png" alt="erro" width="30px" height="30px">
+                                    <% } else { %>
+                                        <img src="images/professor50px.png" alt="erro" width="30px" height="30px">
+                                    <% } %> 
+                                </span>
+                                <input type="text" class="entrada">
+                                <button id="enviar0" type="submit"><img src="images/seta-envio.png" alt="erro" width="30px" height="30px"></button>
+                            </form>
+                        </div>
+                       
+                    </div>
+
+                    <div class="box2">
+                        <div class="box3">
+                            <div class="user">
+                                <img src="images/3-40px.png" alt="erro">
+                                <span><%= user[1] %></span>
+                            </div>
+                            <span class="pergunta"><%= pergunta[1] %></span>
+                            <div class="responder">
+                                <button type="button" id="button1"><img src="images/abrir.svg" alt="erro" id="i1"></button>
+                            </div>
+                        </div>
+
+                        <div id="respostas1" style="display: none;">
+                            <div class="listR">
+                                
+                            </div>
+                            <form class="f">
+                                <span class="u">
+                                    <% if (role == 'aluno') { %>
+                                        <img src="images/aluno50px.png" alt="erro" width="30px" height="30px">
+                                    <% } else { %>
+                                        <img src="images/professor50px.png" alt="erro" width="30px" height="30px">
+                                    <% } %> 
+                                </span>
+                                <input type="text" class="entrada">
+                                <button id="enviar0" type="submit"><img src="images/seta-envio.png" alt="erro" width="30px" height="30px"></button>
+                            </form>
+                        </div>
+                       
+                    </div>
+
+                    <div class="box2">
+                        <div class="box3">
+                            <div class="user">
+                                <img src="images/2-40px.png" alt="erro">
+                                <span><%= user[2] %></span>
+                            </div>
+                            <span class="pergunta"><%= pergunta[2] %></span>
+                            <div class="responder">
+                                <button type="button" id="button2"><img src="images/abrir.svg" alt="erro" id="i2"></button>
+                            </div>
+                        </div>
+
+                        <div id="respostas2" style="display: none;">
+                            <div class="listR">
+                                
+                            </div>
+                            <form class="f">
+                                <span class="u">
+                                    <% if (role == 'aluno') { %>
+                                        <img src="images/aluno50px.png" alt="erro" width="30px" height="30px">
+                                    <% } else { %>
+                                        <img src="images/professor50px.png" alt="erro" width="30px" height="30px">
+                                    <% } %> 
+                                </span>
+                                <input type="text" class="entrada">
+                                <button id="enviar0" type="submit"><img src="images/seta-envio.png" alt="erro" width="30px" height="30px"></button>
+                            </form>
+                        </div>
+                       
+                    </div>
+
+                    <div class="box2">
+                        <div class="box3">
+                            <div class="user">
+                                <img src="images/1-40px.png" alt="erro" width="40px" height="40px">
+                                <span><%= user[3] %></span>
+                            </div>
+                            <span class="pergunta"><%= pergunta[3] %></span>
+                            <div class="responder">
+                                <button type="button" id="button3"><img src="images/abrir.svg" alt="erro" id="i3"></button>
+                            </div>
+                        </div>
+
+                        <div id="respostas3" style="display: none;">
+                            <div class="listR">
+                                
+                            </div>
+                            <form class="f">
+                                <span class="u">
+                                    <% if (role == 'aluno') { %>
+                                        <img src="images/aluno50px.png" alt="erro" width="30px" height="30px">
+                                    <% } else { %>
+                                        <img src="images/professor50px.png" alt="erro" width="30px" height="30px">
+                                    <% } %> 
+                                </span>
+                                <input type="text" class="entrada">
+                                <button id="enviar0" type="submit"><img src="images/seta-envio.png" alt="erro" width="30px" height="30px"></button>
+                            </form>
+                        </div>
+                       
+                    </div>
+
+                </div>               
+            </div>      
+        </div>
+
+    <script>
+        var cont0, cont1, cont2, cont3 = 0
+        var forms = document.querySelectorAll('.f')
+        var respostas0 = document.querySelector('#respostas0')
+        var respostas1 = document.querySelector('#respostas1')
+        var respostas2 = document.querySelector('#respostas2')
+        var respostas3 = document.querySelector('#respostas3')
+
+        function a(x) {
+            x.style.display = 'block'
+        }
+
+        function b(x) {
+            x.style.display = 'none'
+        }
+
+        document.querySelector('#button0').addEventListener('click', () => {
+            if (cont0 == 0) {
+                a(respostas0)
+                document.querySelector('#i0').src = 'images/fechar.svg'
+                cont0 += 1
+            } else {
+                b(respostas0)
+                document.querySelector('#i0').src = 'images/abrir.svg'
+                cont0 = 0
+            }
+        })
+
+        document.querySelector('#button1').addEventListener('click', () => {
+            if (cont1 == 0) {
+                a(respostas1)
+                document.querySelector('#i1').src = 'images/fechar.svg'
+                cont1 += 1
+            } else {
+                b(respostas1)
+                document.querySelector('#i1').src = 'images/abrir.svg'
+                cont1 = 0
+            }
+        })
+
+        document.querySelector('#button2').addEventListener('click', () => {
+            if (cont2 == 0) {
+                a(respostas2)
+                document.querySelector('#i2').src = 'images/fechar.svg'
+                cont2 += 1
+            } else {
+                b(respostas2)
+                document.querySelector('#i2').src = 'images/abrir.svg'
+                cont2 = 0
+            }
+        })
+
+        document.querySelector('#button3').addEventListener('click', () => {
+            if (cont3 == 0) {
+                a(respostas3)
+                document.querySelector('#i3').src = 'images/fechar.svg'
+                cont3 += 1
+            } else {
+                b(respostas3)
+                document.querySelector('#i3').src = 'images/abrir.svg'
+                cont3 = 0
+            }
+        })
+
+
+        for (let i = 0; i < forms.length; i++) {
+            forms[i].addEventListener('submit', (e) => {
+                e.preventDefault()
+                var conteudo = document.querySelectorAll('.entrada')[i] 
+                var l = document.querySelectorAll('.listR')[i]
+                var span = document.createElement('span')
+                span.setAttribute('class', 'r')
+                span.textContent = conteudo.value
+                l.appendChild(span)
+                conteudo.value = ''
+            })
+        } 
+    </script>
+</body>
+</html>

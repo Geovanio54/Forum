@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas</title> 
+    <link rel="stylesheet" href="perguntas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Oleo+Script+Swash+Caps&family=Pompiere&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="box" >
+
+            <div id="barra">
+                <a href="http://localhost:3000/"><img src="images/voltar.png" alt="erro" class="link"></a>
+                <b class="titulo">Forum</b>
+                <% if (role == 'aluno') { %>
+                    <img src="images/aluno50px.png" alt="erro" width="40px" height="40px" class="perfil">
+                <% } else { %>
+                    <img src="images/professor50px.png" alt="erro" width="40px" height="40px" class="perfil">
+                <% } %>  
+            </div>
+            
+            <div id="respostas">
+                <a href="http://localhost:3000/Respostas" >responder perguntas</a>
+            </div>
+
+            <div class="coluna">
+
+                <div class="box2">
+                    <div class="pergunta">
+                        <div class="usuario">
+                            <% if (role == 'aluno') { %>
+                                <img src="images/aluno50px.png" alt="erro" width="40px" height="40px">
+                            <% } else { %>
+                                <img src="images/professor50px.png" alt="erro" width="40px" height="40px">
+                            <% } %>
+                            <b><%= nome %></b>
+                        </div>
+                    </div>
+                    <input type="text" class="entrada" placeholder="escreva aqui">
+                </div>
+                <div class="botaoPost">
+                    <button type="button" class="postar" onclick="adicionarPost()">postar</button>
+                </div>
+
+                <!--<div class="novaBox0">
+                    <div class="novaBox1">
+                        <div class="novaBox2">
+                            <img src="images/aluno50px.png" alt="erro" class="u">
+                            <span>Você</span>
+                        </div>
+                        <span class="user">Pergunta</span>
+                    </div>
+                </div>-->
+
+            </div>
+            
+        </div>      
+    </div>
+
+    <script>
+        function adicionarPost() {
+            var corpo = document.querySelector('.coluna')
+            var input = document.querySelector('.entrada').value
+            var p = document.querySelector('.perfil')
+            var foto = 'http://localhost:3000/images/aluno50px.png'
+
+            $.ajax({
+                url: 'Perguntas',
+                type: 'POST',
+                data: {input: input},
+                success: function() {
+
+                },
+                error: function() {
+                    alert('Aconteceu algum erro');
+                }
+            })
+
+
+            if (input) {
+                
+                var b0 = document.createElement('div')
+                b0.className = 'novaBox0'
+
+                var b1 = document.createElement('div')
+                b1.className = 'novaBox1'
+
+                var b2 = document.createElement('div')
+                b2.className = 'novaBox2'
+
+                var perfil = document.createElement('img')
+                perfil.className = 'u'
+                 if (p.src == foto) { 
+                    perfil.setAttribute('src', 'images/aluno50px.png')
+                 } else { 
+                    perfil.setAttribute('src', 'images/professor50px.png')
+                 } 
+                
+
+                var user = document.createElement('span')
+                user.textContent = 'Você'
+
+                var pergunta = document.createElement('span')
+                pergunta.className = 'user'
+                pergunta.textContent = input
+
+                b2.appendChild(perfil)
+                b2.appendChild(user)
+
+                b1.appendChild(b2)
+                b1.appendChild(pergunta)
+
+                b0.appendChild(b1)
+
+                corpo.appendChild(b0)
+
+                document.querySelector('.entrada').value = ''
+
+            } else {
+                alert('Para postar você tem que fazer uma pergunta')
+            }
+        }
+    </script>
+
+</body>
+</html>

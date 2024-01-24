@@ -1,0 +1,191 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    background-color: #F6F6F6;
+}
+
+.titulo {
+    color: #4d4a4a;
+    font-size: 30px;
+    font-family: 'Oleo Script Swash Caps', system-ui;
+}
+
+#barra{
+    background-color: #3BA9BD;
+    height: 58px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#respostas {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#respostas a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #000;
+    background-color: #3BA9BD;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.perfil {
+    margin-right: 5px;
+    border: 1px solid #000;
+    border-radius: 100%;
+}
+
+.link{
+    margin-left: 5px; 
+}
+
+.container {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 450px;
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.box2 {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.novaBox0 {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.novaBox1 {
+    height: 100%;
+    width: 65%;
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.novaBox2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.u {
+    width: 40px;
+    height: 40px;
+}
+
+.user {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pergunta{
+    height: 100%;
+    width: 65%;
+    background-color: #F6F6F6;
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 15px;
+}
+
+.usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.entrada {
+    position: absolute;
+    height: 96%;
+    width: 63%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    text-align: left;
+    z-index: 1;
+}
+
+.entrada::placeholder{
+    text-align: start;
+    color: #868585;
+    font-size: 20px;
+}
+
+.botaoPost{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.postar{
+    margin-left: 320px;
+    border-radius: 5px;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    background-color: #3BA9BD;
+}
+
+.coluna {
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+.coluna::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}
+
+.coluna::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}

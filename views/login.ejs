@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Link da Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Oleo+Script+Swash+Caps&family=Pompiere&display=swap" rel="stylesheet">
+    <!-- 
+        Acessar
+        font-family: 'Alice', serif;
+        font-family: 'Oleo Script Swash Caps', system-ui;
+        font-family: 'Pompiere', sans-serif;
+    -->  
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="barra"></div>
+    
+    <div id="container">
+
+        <div class="b1">
+            <div class="box">
+                <div class="t0">O Forum</div>
+                <div class="t1">entre e tire suas</div>
+                <div class="t2">duvidas.</div>
+            </div>
+        </div>
+
+        <div class="b2">
+            <form action="Perguntas" method="post">
+                <input type="text" class="dados" name="nome" placeholder="user" required>
+                <input type="password" class="dados" id="pass" placeholder="senha" maxlength="8" required>
+                <div class="radios">
+                    <div>
+                        <input type="radio" name="role" id="aluno" value="1" required>
+                        <label for="aluno">Aluno</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="role" id="professor" value="2" required>
+                        <label for="professor">Professor</label>
+                    </div>            
+                </div>             
+                <input type="submit" value="entrar" class="entrar">
+                <a href="#" class="link">esqueci a senha</a>
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>
