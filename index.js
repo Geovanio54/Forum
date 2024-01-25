@@ -20,18 +20,23 @@ app.get('/', (req, res) => {
 })
 
 app.post('/Perguntas', (req, res) => {
-    const nome = req.body.nome;
+    req.session.nome = req.body.nome;
     // aluno
     if (req.body.role == '1') {
         req.session.role = 'aluno'
-        res.render('Perguntas', {role: req.session.role, nome: nome, perguntasRealizads: perguntasRealizads})       
+        res.render('Perguntas', {role: req.session.role, nome:  req.session.nome, perguntasRealizads: perguntasRealizads})       
     }
     // professor
     else {
         req.session.role = 'professor'
-        res.render('Perguntas', {role: req.session.role, nome: nome})    
+        res.render('Perguntas', {role: req.session.role, nome: req.session.nome, perguntasRealizads: perguntasRealizads})    
     }   
 })
+
+app.get('/Perguntas', (req, res) => {
+    res.render('Perguntas', {role: req.session.role, nome: req.session.nome, perguntasRealizads: perguntasRealizads})
+})
+
 
 
 app.post('/perguntas_realizadas', (req, res) => {
