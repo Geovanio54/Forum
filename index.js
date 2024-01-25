@@ -36,8 +36,7 @@ app.post('/Perguntas', (req, res) => {
 
 app.post('/perguntas_realizadas', (req, res) => {
     const pergunta = req.body.input
-
-    perguntasRealizads.push(perguntas);
+    perguntasRealizads.push(pergunta);
 
 });
 
