@@ -24,17 +24,29 @@ app.post('/Perguntas', (req, res) => {
     // aluno
     if (req.body.role == '1') {
         req.session.role = 'aluno'
-        res.render('Perguntas', {role: req.session.role, nome:  req.session.nome, perguntasRealizads: perguntasRealizads})       
+        res.render('Perguntas', {
+            role: req.session.role,
+            nome:  req.session.nome,
+            perguntasRealizads: perguntasRealizads,
+        })       
     }
     // professor
     else {
         req.session.role = 'professor'
-        res.render('Perguntas', {role: req.session.role, nome: req.session.nome, perguntasRealizads: perguntasRealizads})    
+        res.render('Perguntas', {
+            role: req.session.role,
+            nome: req.session.nome,
+            perguntasRealizads: perguntasRealizads,
+        })    
     }   
 })
 
 app.get('/Perguntas', (req, res) => {
-    res.render('Perguntas', {role: req.session.role, nome: req.session.nome, perguntasRealizads: perguntasRealizads})
+    res.render('Perguntas', {
+        role: req.session.role,
+        nome: req.session.nome,
+        perguntasRealizads: perguntasRealizads
+    })
 })
 
 
@@ -42,11 +54,15 @@ app.get('/Perguntas', (req, res) => {
 app.post('/perguntas_realizadas', (req, res) => {
     const pergunta = req.body.input
     perguntasRealizads.push(pergunta);
-
 });
 
+
 app.get('/Respostas', (req, res) => {
-    res.render('Respostas', {pergunta: perguntas, user: user, role: req.session.role})   
+    res.render('Respostas', {
+        pergunta: perguntas,
+        user: user,
+        role: req.session.role,
+    })   
 })
 
 app.use(express.static('public'))

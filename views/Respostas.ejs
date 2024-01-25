@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Oleo+Script+Swash+Caps&family=Pompiere&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 
@@ -43,7 +44,7 @@
 
                         <div id="respostas0" style="display: none;">
                             <div class="listR">
-                            
+
                             </div>
                             <form class="f">
                                 <span class="u">
@@ -160,6 +161,7 @@
     <script>
         var cont0, cont1, cont2, cont3 = 0
         var forms = document.querySelectorAll('.f')
+        var entrada = document.querySelectorAll('.entrada')
         var respostas0 = document.querySelector('#respostas0')
         var respostas1 = document.querySelector('#respostas1')
         var respostas2 = document.querySelector('#respostas2')
@@ -226,7 +228,7 @@
             forms[i].addEventListener('submit', (e) => {
                 e.preventDefault()
                 var conteudo = document.querySelectorAll('.entrada')[i] 
-                var l = document.querySelectorAll('.listR')[i]
+               var l = document.querySelectorAll('.listR')[i]
                 var span = document.createElement('span')
                 span.setAttribute('class', 'r')
                 span.textContent = conteudo.value
